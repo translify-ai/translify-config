@@ -1,10 +1,11 @@
 {
-  "latestVersion": "1.9.6",
+  "resaleVersion": "1.9.7",
   "immediateTranslationTextCount": 4999,
   "translationStartMode": "dynamic",
   "domReadyDetectTimeout": 3000,
   "translationService": "bing",
   "mouseModifierKeyPressTimeout": 400,
+  "sameLangCheck": true,
   "immediateTranslationPattern": {
     "matches": [
       "www.tumblr.com",
@@ -35,6 +36,7 @@
       "https://www.reddit.com/.compact",
       "https://app.immersivetranslate.com/pdf*",
       "https://app.immersivetranslate.cn/pdf*",
+      "https://app.translify.ai/pdf*",
       "https://bsky.app"
     ],
     "excludeMatches": [],
@@ -70,6 +72,103 @@
   "cache": true,
   "enableAiAssistant": true,
   "enableSelfServiceReport": true,
+  "enablePerformanceReport": true,
+  "performanceBlockUrls": [
+    "https://www.chase.com",
+    "https://www.bankofamerica.com",
+    "https://www.wellsfargo.com",
+    "https://www.citi.com",
+    "https://www.usbank.com",
+    "https://www.pnc.com",
+    "https://www.capitalone.com",
+    "https://www.tdbank.com",
+    "https://www.hsbc.co.uk",
+    "https://www.barclays.co.uk",
+    "https://www.lloydsbank.com",
+    "https://www.natwest.com",
+    "https://www.santander.co.uk",
+    "https://www.nationwide.co.uk",
+    "https://www.deutsche-bank.de",
+    "https://www.commerzbank.de",
+    "https://www.dzbank.de",
+    "https://www.ing.de",
+    "https://www.hypovereinsbank.de",
+    "https://www.bnpparibas.fr",
+    "https://www.credit-agricole.fr",
+    "https://www.societegenerale.fr",
+    "https://www.lcl.fr",
+    "https://www.labanquepostale.fr",
+    "https://www.bk.mufg.jp",
+    "https://www.smbc.co.jp",
+    "https://www.mizuhobank.com",
+    "https://www.resonabank.co.jp",
+    "https://www.shinseibank.com",
+    "http://www.icbc.com.cn",
+    "http://www.ccb.com",
+    "https://www.boc.cn",
+    "http://www.abchina.com",
+    "http://www.cmbchina.com",
+    "http://www.psbc.com",
+    "http://www.cebbank.com",
+    "http://www.cmbc.com.cn",
+    "http://www.citicbank.com",
+    "http://www.spdb.com.cn",
+    "http://www.bankcomm.com",
+    "http://www.cib.com.cn",
+    "http://www.hxb.com.cn",
+    "http://www.cbhb.com.cn",
+    "http://www.czbank.com",
+    "http://www.bankofbeijing.com.cn",
+    "http://www.bankofshanghai.com",
+    "http://www.hfbank.com.cn",
+    "http://www.gdb.com.cn",
+    "http://www.pingan.com",
+    "https://www.rbcroyalbank.com",
+    "https://www.td.com",
+    "https://www.scotiabank.com",
+    "https://www.cibc.com",
+    "https://www.bmo.com",
+    "https://www.commbank.com.au",
+    "https://www.westpac.com.au",
+    "https://www.anz.com.au",
+    "https://www.nab.com.au",
+    "https://www.macquarie.com.au",
+    "https://www.sbi.co.in",
+    "https://www.icicibank.com",
+    "https://www.hdfcbank.com",
+    "https://www.axisbank.com",
+    "https://www.pnbindia.in",
+    "https://www.bb.com.br",
+    "https://www.itau.com.br",
+    "https://www.bradesco.com.br",
+    "https://www.santander.com.br",
+    "https://www.caixa.gov.br",
+    "https://www.sberbank.ru",
+    "https://www.vtb.ru",
+    "https://www.gazprombank.ru",
+    "https://www.alfabank.ru",
+    "https://www.rshb.ru",
+    "https://www.bancosantander.es",
+    "https://www.bbva.es",
+    "https://www.caixabank.es",
+    "https://www.bankia.es",
+    "https://www.sabadell.com",
+    "https://www.unicredit.it",
+    "https://www.intesasanpaolo.com",
+    "https://www.mps.it",
+    "https://www.ubibanca.com",
+    "https://www.bancobpm.it",
+    "https://www.ing.nl",
+    "https://www.rabobank.nl",
+    "https://www.abnamro.nl",
+    "https://www.volksbank.nl",
+    "https://www.triodos.nl",
+    "https://www.ubs.com",
+    "https://www.credit-suisse.com",
+    "https://www.raiffeisen.ch",
+    "https://www.zkb.ch",
+    "https://www.postfinance.ch"
+  ],
   "proOpenaiModels": [
     "gpt-3.5-turbo",
     "gpt-3.5-turbo-0125",
@@ -90,7 +189,7 @@
   "translationModeUrlPattern": {
     "dualMatches": [],
     "translationMatches": [
-      "https://app.immersivetranslate.com/pdf/"
+      "https://app.translify.ai/pdf/"
     ]
   },
   "translationModeLanguagePattern": {
@@ -103,14 +202,15 @@
   ],
   "autoTranslateParams": [
     "_immersive_translate_auto_translate",
-    "crosearch_translate"
+    "crosearch_translate",
+    "bilin_translate"
   ],
   "enabled": true,
   "minVersion": "0.6.2",
   "showOpenaiOnSafari": true,
   "showUnconfiguredTranslationServiceInPopup": true,
-  "donateUrl": "https://immersivetranslate.com/pricing",
-  "uninstallUrl": "https://onboarding.immersivetranslate.com/uninstall",
+  "donateUrl": "https://translify.ai/pricing",
+  "uninstallUrl": "",
   "feedbackUrl": "https://github.com/immersive-translate/immersive-translate/issues",
   "arxivRule": {
     "injectContainerSelector": ".extra-services .full-text ul",
@@ -140,7 +240,7 @@
     "https://readcomiconline.li[ReadComicOnline][chrome]",
     "https://readcomic.me[ReadComic][chrome]",
     "https://comic-fuz.com/[COMIC FUZ][chrome,firefox,safari,userscript,imtAndroid,imtIOS]",
-    "https://mangadex.org/[MangaDex][chrome,firefox,safari,userscript,imtAndroid,imtIOS]",
+    "https://mangadex.org/[MangaDex][chrome,firefox,safari,userscript,imtIOS]",
     "https://www.yamibo.com/site/manga[Yamibo][chrome,firefox,imtAndroid]",
     "https://shonenjumpplus.com[ShonenJumpPlus][chrome,firefox,safari,userscript,imtAndroid,imtIOS]",
     "https://viewer.heros-web.com/[Heros Web][chrome,firefox,safari,userscript,imtAndroid,imtIOS]",
@@ -155,7 +255,7 @@
     "https://www.idmzj.com[动漫之家]",
     "https://jmanga.org[Jmanga][chrome,firefox,safari,imtAndroid]",
     "https://twicomi.com/manga*[Twitter Comic][chrome,firefox,safari,userscript,imtAndroid,imtIOS]",
-    "https://wnacg.com[Wnacg][chrome,firefox,safari,imtIOS]",
+    "https://wnacg.com[Wnacg][chrome,firefox,safari]",
     "https://vw.mangaz.com[MangaZ][chrome,firefox]",
     "https://pash-up.jp[PASH UP][chrome]",
     "https://www.colamanga.com[COLAMANGA][chrome,firefox,safari,userscript,imtAndroid,imtIOS]",
@@ -167,7 +267,11 @@
     "https://www.corocoro.jp[CoroCoro][chrome,firefox,safari,userscript,imtAndroid,imtIOS]",
     "https://yymanhua.com[Yymanhua][chrome,firefox,imtAndroid]",
     "https://manhwatop.com[Manhwatop][chrome,firefox,imtAndroid]",
-    "https://palcy.jp/[Palcy][chrome,firefox,safari,imtAndroid]"
+    "https://palcy.jp/[Palcy][chrome,firefox,safari,imtAndroid]",
+    "https://comic-trail.com/[Comic-Trail][chrome,firefox,userscript,imtAndroid,imtIOS]",
+    "https://mangaflame.org/[Mangaflame][chrome,firefox,safari,imtAndroid]",
+    "https://templetoons.com/[Templetoons][chrome,firefox,safari]",
+    "https://batocomic.net/[Batocomic][chrome,firefox,safari,imtAndroid]"
   ],
   "supportedVideoSubtitleSites": [
     "https://www.youtube.com[Youtube]",
@@ -204,7 +308,6 @@
     "https://www.nma.art/[nmaArt]",
     "https://developer.apple.com[Developer Apple]",
     "https://egghead.io/[egghead.io]",
-    "https://mubi.com/[Mubi]",
     "https://www.viu.com/[Viu]",
     "https://cn.linkedin.com/[LinkedIn]",
     "https://www.kanopy.com/[Kanopy]",
@@ -262,7 +365,9 @@
     "https://khflix.com[Khflix]",
     "https://donghuaworld.com[Donghuaworld]",
     "https://projector.datacamp.com[Datacamp]",
-    "https://urplay.se[Urplay]"
+    "https://urplay.se[Urplay]",
+    "https://www.ganjingworld.com[Ganjingworld]",
+    "https://app.lecturio.com[Lecturio]"
   ],
   "isShowContextMenu": true,
   "enableInputTranslation": true,
@@ -284,9 +389,9 @@
     "*.medium.com",
     "news.ycombinator.com"
   ],
-  "spVersion": "1.9.8",
+  "spVersion": "1.9.9",
   "ispVersion": "1.0.5",
-  "gspVersion": "1.0.3",
+  "gspVersion": "1.0.6",
   "modifiedBySystem": false,
   "enableDefaultAlwaysTranslatedUrls": true,
   "isChangedAlwaysTranslatedUrls": false,
@@ -303,13 +408,13 @@
   "translationPosition": "after",
   "inputTranslationService": "inherit",
   "inputTranslationBlockUrls": [
-    "*.feishu.cn",
     "*.larkoffice.com",
     "*.larksuite.com",
     "www.notion.so",
     "www.figma.com/file/*",
     "*.lanhuapp.com",
-    "https://*.immersivetranslate.com/text*"
+    "https://*.immersivetranslate.com/text*",
+    "https://*.translify.ai/text*"
   ],
   "inputStyleBlockUrls": [],
   "inputTargetLanguage": "en",
@@ -326,12 +431,16 @@
     "enable": true,
     "blockUrls": [
       "*immersivetranslate.com/preview",
-      "*.immersivetranslate.com/download-subtitle*"
+      "*.immersivetranslate.com/download-subtitle*",
+      "*translify.ai/preview",
+      "*.translify.ai/download-subtitle*"
     ],
     "guideBlockUrls": [
       "https://onboarding.immersivetranslate.com*",
       "https://immersivetranslate.com/accounts/login*",
-      "https://immersivetranslate.cn/accounts/login*"
+      "https://immersivetranslate.cn/accounts/login*",
+      "https://onboarding.translify.ai*",
+      "https://translify.ai/accounts/login*"
     ],
     "clickType": "translate",
     "afterInstalledAt": "",
@@ -343,12 +452,16 @@
     "enable": true,
     "blockUrls": [
       "*immersivetranslate.com/preview",
-      "*.immersivetranslate.com/download-subtitle*"
+      "*.immersivetranslate.com/download-subtitle*",
+      "*translify.ai/preview",
+      "*.translify.ai/download-subtitle*"
     ],
     "guideBlockUrls": [
       "https://onboarding.immersivetranslate.com*",
       "https://immersivetranslate.com/accounts/login*",
-      "https://immersivetranslate.cn/accounts/login*"
+      "https://immersivetranslate.cn/accounts/login*",
+      "https://onboarding.translify.ai*",
+      "https://translify.ai/accounts/login*"
     ],
     "clickType": "translate",
     "afterInstalledAt": "2023-10-28",
@@ -404,19 +517,23 @@
   },
   "inputStartingTriggerKeyAlias": {
     "/": [
-      "、"
+      "、",
+      "slash"
     ],
     ".": [
-      "。"
+      "。",
+      "period"
     ],
     ",": [
-      "，"
+      "，",
+      "comma"
     ],
     "space": [
       " "
     ],
     ";": [
-      "；"
+      "；",
+      "semicolon"
     ],
     ":": [
       "："
@@ -428,6 +545,9 @@
     "https://immersive-translate.owenyoung.com/auth-done/",
     "https://dash.immersivetranslate.com/",
     "https://dash.immersivetranslate.com/auth-done/",
+    "https://dash.translify.ai/*",
+    "https://dash.translify.ai/",
+    "https://dash.translify.ai/auth-done/",
     "http://localhost:8000/dist/userscript/options/",
     "http://localhost:8000/auth-done/",
     "http://192.168.50.9:8000/dist/userscript/options/",
@@ -512,7 +632,7 @@
       ]
     },
     "google": {
-      "visible": true,
+      "defaultVisible": true,
       "requestTimeout": 15000,
       "retry": 1,
       "placeholderDelimiters": [
@@ -525,7 +645,7 @@
     },
     "transmart": {
       "limit": 20,
-      "visible": true,
+      "defaultVisible": true,
       "requestTimeout": 10000,
       "placeholderDelimiters": [
         "#",
@@ -612,7 +732,7 @@
       ]
     },
     "bing": {
-      "visible": true,
+      "defaultVisible": true,
       "maxTextLengthPerRequest": 1800,
       "requestTimeout": 10000,
       "retry": 1,
@@ -626,7 +746,7 @@
       "richTag": "c"
     },
     "yandex": {
-      "visible": true,
+      "defaultVisible": true,
       "maxTextLengthPerRequest": 1000,
       "requestTimeout": 10000,
       "retry": 1,
@@ -716,7 +836,7 @@
           "systemPrompt": "你是一個專業的、地道的翻譯引擎。你只返回翻譯的文本，不做任何解釋。",
           "prompt": "將以下文本翻譯成 {{to}}：\n\n<text>\n{{text}}\n</text>\n\n直接輸出翻譯結果，不要添加任何額外的文本或標籤。",
           "multiplePrompt": "你將會得到一個包含 \"id\" 和 \"{{imt_source_field}}\" 欄位的 YAML 格式輸入。以下是輸入內容：\n\n<yaml>\n{{yaml}}\n</yaml>\n\n對於 YAML 中的每個條目，將 \"{{imt_source_field}}\" 欄位的內容翻譯成 {{to}}。將翻譯結果寫回每個條目的 \"{{imt_source_field}}\" 欄位。\n\n以下是期望的格式範例：\n\n{{normal_result_yaml_example}}\n\n請直接返回翻譯後的 YAML，不要添加任何額外的標籤。",
-          "subtitlePrompt": "你將會翻譯一組 YAML 格式的視頻字幕中的 \"{{imt_sub_source_field}}\" 欄位為 {{to}}。以下是原始字幕的 YAML 格式：\n\n<yaml_subtitles>\n{{yaml}}\n</yaml_subtitles>\n\n請僅翻譯每個字幕條目中的 \"{{imt_sub_source_field}}\" 欄位為簡體中文。不要翻譯或更改 \"id\" 欄位。\n\n以相同的 YAML 格式輸出翻譯後的字幕，每個字幕條目各佔一行。\"id\" 欄位應保持不變，\"{{imt_sub_source_field}}\" 欄位應包含你的 {{to}} 翻譯結果。\n\n請直接返回翻譯後的 YAML，不要添加任何額外的標籤。"
+          "subtitlePrompt": "你將會翻譯一組 YAML 格式的影片字幕中的 \"{{imt_sub_source_field}}\" 欄位為 {{to}}。以下是原始字幕的 YAML 格式：\n\n<yaml_subtitles>\n{{yaml}}\n</yaml_subtitles>\n\n請僅翻譯每個字幕條目中的 \"{{imt_sub_source_field}}\" 欄位為簡體中文。不要翻譯或更改 \"id\" 欄位。\n\n以相同的 YAML 格式輸出翻譯後的字幕，每個字幕條目各佔一行。\"id\" 欄位應保持不變，\"{{imt_sub_source_field}}\" 欄位應包含你的 {{to}} 翻譯結果。\n\n請直接返回翻譯後的 YAML，不要添加任何額外的標籤。"
         },
         {
           "id": "zh-CN2auto",
@@ -1011,7 +1131,11 @@
       "provider": "custom",
       "limit": 10,
       "model": "Qwen/Qwen2-7B-Instruct",
-      "apiUrl": "https://api.siliconflow.cn/v1/chat/completions"
+      "apiUrl": "https://api.siliconflow.cn/v1/chat/completions",
+      "defaultVisible": true,
+      "defaultHiddenLangs": [
+        "zh-TW"
+      ]
     },
     "lingyiwanwu": {
       "extends": "ai",
@@ -1022,6 +1146,31 @@
       "maxTextGroupLengthPerRequestForSubtitle": 1,
       "apiUrl": "https://api.lingyiwanwu.com/v1/chat/completions",
       "enableRichTranslate": true
+    },
+    "zhipu": {
+      "extends": "ai",
+      "name": "zhipu",
+      "model": "glm-4-flash",
+      "defaultVisible": true,
+      "defaultHiddenLangs": [
+        "zh-TW"
+      ],
+      "provider": "custom",
+      "limit": 10,
+      "bodyConfigs": {
+        "temperature": 0.01,
+        "top_p": 0.1,
+        "max_tokens": 2048
+      },
+      "ignoreResRegexs": [
+        "^系统检测到输入或生成内容可能包含不安全或敏感内容"
+      ],
+      "maxTextGroupLengthPerRequestForSubtitle": 1,
+      "apiUrl": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+      "enableRichTranslate": false,
+      "enableFallback": true,
+      "prompt": "Source Text:\n\"\"\"\n{{text}}\n\"\"\"\n\n## Translation Requirements:\n1. Stay true to the “Source Text” ensuring each sentence is translated accurately and fluently.\n2. Ensure that no part of the text is omitted during translation. Every detail must be included.\n3. Large numbers must be translated correctly, following Simplified Chinese conventions.\n\n## Instruction:\n1. Carefully analyze and deeply understand the content, context, emotions, and cultural nuances of the \"Source Text\" in relation to the target language.\n2. Translate the \"Source Text\" into {{to}} accurately according to the \"Translation Requirements\".\n3. Ensure the translation is accurate, natural, and fluent for the target audience. Adjust expressions as necessary to fit cultural and linguistic norms.\n\n## Requirements:\nDo not include any additional content. Only output the translation. This is crucial.",
+      "systemPrompt": "## Role:\nYou are an expert in both the source and target languages, with a deep understanding of their respective cultures."
     }
   },
   "shortcuts": {
@@ -1030,13 +1179,13 @@
     "toggleOnlyTransation": "",
     "toggleTranslateToThePageEndImmediately": "",
     "toggleTranslationMask": "",
-    "shareToDraft": "",
     "toggleMouseHoverTranslateDirectly": ""
   },
   "tempTranslateDomainMinutes": 0,
   "translationParagraphLanguagePattern": {
     "matches": [
       "onboarding.immersivetranslate.com",
+      "onboarding.translify.ai",
       "www.reddit.com",
       "old.reddit.com",
       "twitter.com",
@@ -1168,6 +1317,7 @@
       "select",
       "option",
       "mjx-container",
+      "mjx-math",
       "use",
       "d-math",
       "mathml",
@@ -1252,6 +1402,7 @@
       "web-highlight",
       "font.immersive-translate-target-wrapper *",
       "pre",
+      "pre code",
       ".uacc-clickable"
     ],
     "mutationExcludeContainsSelectors": [
@@ -1267,8 +1418,7 @@
     "atomicBlockSelectors": [
       "relin-hc",
       "x-p",
-      "app-keyword-content",
-      "code *"
+      "app-keyword-content"
     ],
     "ignoreRichSelectors": [
       "relin-hc",
@@ -1291,6 +1441,11 @@
     },
     "imageRule": {
       "enable": true,
+      "mangaTranslator": "auto",
+      "commonTranslator": "deepl",
+      "enableTools": true,
+      "hoverMinWidth": 280,
+      "hoverMinHeight": 280,
       "concurrency": 2,
       "queryIntervalTime": 1000,
       "errorTimes": 3,
@@ -1581,6 +1736,9 @@
     "bodyRule": {
       "enable": true,
       "maxBodyScreenLength": 25,
+      "preSelectors": [
+        "h1"
+      ],
       "articleChildTags": [
         "P"
       ],
@@ -1710,7 +1868,9 @@
       "aside.onebox"
     ],
     "atomicBlockTags": [],
-    "excludeSelectors": [],
+    "excludeSelectors": [
+      "[default-translate]"
+    ],
     "additionalExcludeSelectors": [
       "[contenteditable=\"true\"]",
       ".uacc-clickable",
@@ -1748,7 +1908,8 @@
       "h1 br",
       "h2 br",
       "h3 br",
-      "h4 br"
+      "h4 br",
+      ".easyscholar-ranking"
     ],
     "translationClasses": [],
     "excludeTags": [
@@ -1883,8 +2044,7 @@
       ".highlighter--highlighted",
       ".rw-highlight",
       "ruby *",
-      "p > button",
-      "code *"
+      "p > button"
     ],
     "extraBlockSelectors": [
       "turbo-frame",
@@ -1895,7 +2055,8 @@
       "ul > li",
       "label",
       "button",
-      "[class*='menu-button']"
+      "[class*='menu-button']",
+      "br"
     ],
     "allBlockTags": [
       "BODY",
@@ -1966,7 +2127,8 @@
     "touchShortcutsToggleTranslateTouchElement": "touchShortcutsOff",
     "touchShortcutsToggleTranslateTouchElementPreferenceKey": "slide.left",
     "mouseHoverHoldKey": "Off",
-    "mouseHoverPreferenceKey": "Ctrl"
+    "mouseHoverPreferenceKey": "Ctrl",
+    "mousePressHoldTranslateDelay": 800
   },
   "rules": [
     {
@@ -2037,6 +2199,9 @@
         "https://app.immersivetranslate.cn/pdf/",
         "https://app.immersivetranslate.com/pdf/*",
         "https://app.immersivetranslate.cn/pdf/*",
+        "https://app.translify.ai/pdf",
+        "https://app.translify.ai/pdf/",
+        "https://app.translify.ai/pdf/*",
         "https://app.infread.com/pdf/*",
         "http://localhost:38001/pdf*"
       ],
@@ -2097,6 +2262,9 @@
         "www.scihubmirror.com",
         "*.sci-hub.*"
       ],
+      "excludeMatches": [
+        "https://x.sci-hub.org.cn/scholar"
+      ],
       "waitForSelectorsTimeout": 1,
       "pdfUrlExtractRule": {
         "selector": "#pdf",
@@ -2117,6 +2285,7 @@
       "matches": [
         "https://app.immersivetranslate.com/ebook/make/",
         "https://app.immersivetranslate.cn/ebook/make/",
+        "https://app.translify.ai/ebook/make/",
         "https://app.infread.com/ebook/make/",
         "http://localhost:38001/ebook/make/"
       ],
@@ -2188,7 +2357,11 @@
         "https://test.immersivetranslate.com/preview*",
         "https://immersivetranslate.com/drafts*",
         "https://immersivetranslate.cn/drafts*",
-        "https://test.immersivetranslate.com/drafts*"
+        "https://test.immersivetranslate.com/drafts*",
+        "https://translify.ai/preview*",
+        "https://test.translify.ai/preview*",
+        "https://translify.ai/drafts*",
+        "https://test.translify.ai/drafts*"
       ],
       "isInjectVersion": true,
       "isInjectMeta": true,
@@ -2197,7 +2370,8 @@
     {
       "id": "pro-pdf",
       "matches": [
-        "https://*.immersivetranslate.com/pdf-pro*"
+        "https://*.immersivetranslate.com/pdf-pro*",
+        "https://*.translify.ai/pdf-pro*"
       ],
       "pageType": "pdfProReader",
       "excludeSelectors": [
@@ -2251,7 +2425,8 @@
     {
       "id": "download-subtitle",
       "matches": [
-        "https://*.immersivetranslate.com/download-subtitle*"
+        "https://*.immersivetranslate.com/download-subtitle*",
+        "https://*.translify.ai/download-subtitle*"
       ],
       "pageType": "downloadSubtitle",
       "allowThirdPartyTranslate": true,
@@ -2265,6 +2440,8 @@
       "matches": [
         "test-app.immersivetranslate.com/word*",
         "app.immersivetranslate.com/word*",
+        "test-app.translify.ai/word*",
+        "app.translify.ai/word*",
         "app.infread.com/word*"
       ],
       "blockMinTextCount": 0,
@@ -2277,7 +2454,9 @@
       "id": "onboarding",
       "matches": [
         "https://onboarding.immersivetranslate.com",
-        "https://test-onboarding.immersivetranslate.com"
+        "https://test-onboarding.immersivetranslate.com",
+        "https://onboarding.translify.ai",
+        "https://test-onboarding.translify.ai"
       ],
       "allowInnerInvoke": true,
       "isInjectVersion": true,
@@ -2299,6 +2478,12 @@
         "http://localhost:38001",
         "https://ai.immersivetranslate.com",
         "https://test-ai.immersivetranslate.com",
+        "https://translify.ai",
+        "https://test.translify.ai",
+        "https://app.translify.ai",
+        "https://test-app.translify.ai",
+        "https://ai.translify.ai",
+        "https://test-ai.translify.ai",
         "https://app.infread.com"
       ],
       "allowInnerInvoke": true,
@@ -2369,10 +2554,27 @@
       "id": "preCodeSites",
       "matches": [
         "taylor.town",
-        "seller.shopee.*",
-        "www.flatpanelshd.com"
+        "www.flatpanelshd.com",
+        "www.rarlab.com"
       ],
       "isTransformPreTagNewLine": true,
+      "excludeTags.remove": [
+        "PRE"
+      ],
+      "likePreSelectors.add": [
+        "CODE"
+      ],
+      "stayOriginalTags.remove": [
+        "CODE"
+      ]
+    },
+    {
+      "id": "shopee",
+      "matches": "seller.shopee.*",
+      "isTransformPreTagNewLine": true,
+      "globalStyles.add": {
+        ".ellipsis-content": "-webkit-line-clamp:unset;"
+      },
       "excludeTags.remove": [
         "PRE"
       ],
@@ -2402,10 +2604,7 @@
       "likePreSelectors.add": [
         ".mainText"
       ],
-      "isTransformPreTagNewLine": true,
-      "mutationExcludeSelectors.add": [
-        ".mainText"
-      ]
+      "isTransformPreTagNewLine": true
     },
     {
       "id": "wikipedia",
@@ -2552,6 +2751,10 @@
           "#layers[style='z-index: 1;'] [style='height: 100px;'] { height: 400px !important; }",
           "video::cue {white-space: pre-line;}"
         ]
+      },
+      "imageRule.add": {
+        "opImageType": "append",
+        "imageStyle": "opacity:1;position:unset;"
       }
     },
     {
@@ -2642,7 +2845,7 @@
         "liveSubtitleRule": {
           "containerSelector": ".ui-box .ui-box[class='ui-box']",
           "textSelectors": [
-            "data-tid='closed-caption-text'"
+            "[data-tid='closed-caption-text']"
           ],
           "reportSelector": "[data-tid='closed-captions-renderer']",
           "mutationChangeDelay": 1000
@@ -2914,6 +3117,7 @@
         "[data-testid=comment]",
         "[data-adclicklocation='title'] h3",
         "[data-testid='post-title-text']",
+        "[data-testid=search-subreddit-desc-text]",
         "[slot=comment]",
         "[data-adclicklocation=media]",
         ".PostContent",
@@ -2975,6 +3179,7 @@
         "https://github.com/readme/*",
         "https://github.com/readme/",
         "https://github.com/features/*",
+        "https://github.com/codespaces",
         "https://github.com/customer-stories/*"
       ],
       "mutationExcludeSelectors": [
@@ -3089,6 +3294,9 @@
       "translationClasses": [
         "immersive-translate-text"
       ],
+      "injectedCss.add": [
+        "._4ik4._4ik5 {max-height:unset!important;}"
+      ],
       "detectParagraphLanguage": true
     },
     {
@@ -3101,6 +3309,7 @@
         ".slim-video-information-title",
         ".yt-spec-button-view-model",
         ".yt-core-attributed-string > span",
+        ".yt-core-attributed-string",
         ".title"
       ],
       "shareConfig": {
@@ -3126,6 +3335,9 @@
       ],
       "mutationExcludeSelectors.add": [
         ".imt-caption-container *"
+      ],
+      "excludeSelectors.add": [
+        ".ytm-badge-and-byline-item-byline"
       ],
       "subtitleRule.add": {
         "type": "youtube",
@@ -3651,7 +3863,8 @@
         "td a.gsc_a_at",
         "td div.gs_gray:last-of-type",
         "div.gsc_oci_value",
-        "#gs_opinion"
+        "#gs_opinion",
+        ".gs_rt"
       ],
       "extraInlineSelectors": [
         "br"
@@ -3771,7 +3984,7 @@
         "main div[class^=headerText]": "max-height: unset;",
         "main div[class^=message]": "max-height: unset;",
         "main div[class^=text]": "max-height: unset;",
-        "h3[data-text-variant='heading-lg/semibold']": "-webkit-line-clamp: none;"
+        "h3[data-text-variant='heading-lg/semibold']": "-webkit-line-clamp: unset;line-height: unset;"
       },
       "enableRichTranslate": false,
       "detectParagraphLanguage": true,
@@ -4084,6 +4297,10 @@
         ".article-body",
         ".interview-body",
         ".post-page__content"
+      ],
+      "additionalExcludeSelectors.remove": [
+        ".notranslate",
+        "[translate=no]"
       ]
     },
     {
@@ -4567,7 +4784,7 @@
     },
     {
       "id": "amazon",
-      "matches": "www.amazon.com",
+      "matches": "www.amazon.*",
       "paragraphMinTextCount": 4,
       "paragraphMinWordCount": 2,
       "repeatTranslateNum": 3,
@@ -4675,6 +4892,9 @@
       "bodyRule.add": {
         "bodySelector": "article"
       },
+      "injectedCss.add": [
+        "h2 {font-size:unset;}"
+      ],
       "enableRichTranslate": false,
       "enableRichTranslate.add_v.[1.9.7]": true
     },
@@ -5021,6 +5241,9 @@
         "streamingChange": false,
         "streamingDeepChild": true,
         "streamingDelayTime": 1000
+      },
+      "globalStyles": {
+        "[class^='BotListItem_botDescription']": "-webkit-line-clamp: unset;"
       }
     },
     {
@@ -5612,7 +5835,8 @@
       "id": "perplexity",
       "matches": "https://www.perplexity.ai",
       "excludeMatches": [
-        "https://www.perplexity.ai/hub/*"
+        "https://www.perplexity.ai/hub/*",
+        "https://www.perplexity.ai/onboarding"
       ],
       "globalStyles": {
         ".line-clamp-1": "-webkit-line-clamp: unset !important;",
@@ -5876,11 +6100,11 @@
         ".copyable-text",
         "[role=list]"
       ],
-      "additionalExcludeSelectors.add": [
-        "[aria-hidden=\"true\"]"
-      ],
       "wrapperPrefix": "\n",
       "wrapperSuffix": "<br/>",
+      "additionalExcludeSelectors.add": [
+        "[aria-hidden=true]"
+      ],
       "extraInlineSelectors.add": [
         ".selectable-text",
         ".selectable-text *"
@@ -5918,6 +6142,7 @@
         ".highLightSearchTarget"
       ],
       "isTransformPreTagNewLine": true,
+      "detectParagraphLanguage": true,
       "globalStyles": {
         "#atomic .Mt\\(20px\\)": "margin-top: 100px;",
         "[class*='LineClamp']": "-webkit-line-clamp:unset;max-height:unset;",
@@ -5934,7 +6159,8 @@
         "footer",
         "nav",
         "[aria-label='Markets summary']"
-      ]
+      ],
+      "injectedCss.add": ".immersive-translate-target-wrapper br {display:none;}"
     },
     {
       "id": "businessinsider",
@@ -6562,8 +6788,14 @@
     },
     {
       "id": "qqMail",
-      "matches": "mail.qq.com",
-      "useIframePostMessage": false
+      "matches": "*.mail.qq.com",
+      "useIframePostMessage": false,
+      "excludeSelectors.add": [
+        ".xmail-cmp-account"
+      ],
+      "globalStyles": {
+        ".mail-list-page-wide-item": "height:unset;"
+      }
     },
     {
       "id": "nikkei",
@@ -6817,23 +7049,15 @@
         "subtitleUrlRegExp": "^https://.+?.oca.nflxvideo.net/\\?([ovet]=[^=]+){4}$",
         "loadingStyle": "bottom: 15%;",
         "quickButtonRule": {
-          "appendSelector": "[data-uia=\"control-next\"]",
-          "insertBeforeSelector": "[data-uia=\"control-next\"]",
+          "appendSelector": "[data-uia=\"control-audio-subtitle\"]",
+          "insertBeforeSelector": "[data-uia=\"control-audio-subtitle\"]",
           "injectCSS": ".imt-quick-subtitle-button {height: 60%; margin-right: 50px; font-size: 20px; } .logo,.logo svg { height: 36px; width: 36px} .label { display: none; } .imt-quick-subtitle-pop-content {transform: translateX(50%); right: 0}"
         },
         "videoSelector": "video",
         "rtlInjectedCss": [
           "[data-immersive-translate_rtl] #immersive-translate-caption-window {direction: rtl;}"
         ],
-        "attachRule": {
-          "appendSelector": ".watch-video",
-          "injectedCSS": [
-            ".imt-caption-window {margin-bottom: 0px; bottom: 10vw;}"
-          ],
-          "injectedGlobalCSS": [
-            ".player-timedtext {display: none !important; }"
-          ]
-        }
+        "enableHookDownload": true
       }
     },
     {
@@ -6850,7 +7074,7 @@
         ".shaka-text-container *"
       ],
       "subtitleRule.add": {
-        "type": "udemy",
+        "type": "subsrt",
         "subtitleUrlRegExp": "^https://vtt.*\\.udemycdn\\.com/.*\\.vtt",
         "videoPlayerSelector": "video.shaka-video",
         "humanTrust": 85,
@@ -7078,7 +7302,7 @@
       },
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".zao-surface .zao-image"
         ],
@@ -7098,7 +7322,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".eAvsta_root img.G54Y0W_page"
         ],
@@ -7118,7 +7342,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#i3 #img",
           "#sd img"
@@ -7141,7 +7365,7 @@
         "manga18.club"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".image_story img"
         ],
@@ -7159,7 +7383,7 @@
       "id": "fhentai",
       "matches": "fhentai.net",
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "img[loading='lazy']"
         ],
@@ -7179,7 +7403,7 @@
         "visortmo_notranslate.com"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".img-container img"
         ],
@@ -7195,7 +7419,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "opImageType": "insertFirst",
         "imageSelectors": [
           "#comicImages img",
@@ -7215,7 +7439,7 @@
       "matches": "acgmhh.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "opImageType": "insertFirst",
         "imageSelectors": [
           ".manga-picture img"
@@ -7237,7 +7461,7 @@
       "matches": "www.177picyy.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".single-content img"
         ],
@@ -7257,7 +7481,7 @@
       "matches": "yymanhua.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#cp_img img"
         ],
@@ -7279,7 +7503,7 @@
       "matches": "www.antbyw.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#jameson_manhua img",
           "#jamesonreadtouch img"
@@ -7304,7 +7528,7 @@
       "matches": "jmanga.org",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".container-reader-chapter img"
         ],
@@ -7329,7 +7553,7 @@
       "matches": "https://twicomi.com/manga*",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".image img"
         ],
@@ -7350,7 +7574,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#imgarea img",
           "#img_list img"
@@ -7363,8 +7587,7 @@
         "platforms": [
           "chrome",
           "firefox",
-          "safari",
-          "imtIOS"
+          "safari"
         ]
       }
     },
@@ -7373,7 +7596,7 @@
       "matches": "nhentai.net",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#image-container img"
         ],
@@ -7393,7 +7616,7 @@
       "matches": "kemono.su",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".post__thumbnail figure img"
         ],
@@ -7411,7 +7634,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".page-break.no-gaps img"
         ],
@@ -7435,7 +7658,7 @@
       "matches": "www.wn01.cc",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#img_list img"
         ],
@@ -7450,7 +7673,7 @@
       "matches": "fantia_notranslate.*",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "picture.article__atomic-block img"
         ],
@@ -7465,7 +7688,7 @@
       "matches": "pash-up.jp",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "opImageType": "append",
         "imageSelectors": [
           "#canvasCluster canvas",
@@ -7485,7 +7708,7 @@
       "matches": "www.colamanga.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".mh_comicpic img"
         ],
@@ -7501,7 +7724,7 @@
       "matches": "*.ganganonline.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "img[decoding='async']"
         ],
@@ -7520,7 +7743,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#viewer img"
         ],
@@ -7541,9 +7764,9 @@
       "matches": "asuracomic.net",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
-          "img[alt='chapter page']"
+          "img[alt^='chapter page']"
         ],
         "loadingSelectors": [
           "div"
@@ -7567,7 +7790,7 @@
       "matches": "allmanga.to",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#pictureViewer img"
         ],
@@ -7591,7 +7814,7 @@
       "matches": "allporncomic.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".read-container img"
         ],
@@ -7611,7 +7834,7 @@
       "matches": "*.mangaz.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "opImageType": "append",
         "imageSelectors": [
           ".page_image canvas",
@@ -7631,7 +7854,7 @@
       "matches": "girls-h-comics.com",
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".moviebese img"
         ],
@@ -7649,7 +7872,7 @@
         "gaugau.futabanet_block_too_much.jp"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".works_tateyomi__wrap img",
           ".pt-img img"
@@ -7667,7 +7890,7 @@
         "web-ace.*"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "img.viewerFixedImage"
         ],
@@ -7684,7 +7907,7 @@
         "toonily_notranslate.me"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#chapter-images img"
         ],
@@ -7700,7 +7923,7 @@
         "omegascans_notranslate.org"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "urlFetchType": "img",
         "imageSelectors": [
           "main #content .container .flex-col img[data-src]"
@@ -7716,7 +7939,7 @@
       "id": "zerobywzz",
       "matches": "www.zerobywzz.com",
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".uk-text-center img"
         ],
@@ -7730,7 +7953,7 @@
       "id": "idmzj",
       "matches": "www.idmzj.com",
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".scrollbar-demo-item img"
         ],
@@ -7751,7 +7974,7 @@
         "www.bomtoon_notranslate.com"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "urlFetchType": "img",
         "imageSelectors": [
           "img[data-nimg]"
@@ -7769,7 +7992,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".img-responsive",
           ".needsclick img"
@@ -7792,7 +8015,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".comicContent-list img",
           ".van-image img"
@@ -7813,7 +8036,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#divImage img",
           ".page-chapter img"
@@ -7844,7 +8067,7 @@
         "img.page-image.js-page-image"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".js-page-area canvas",
           "img.page-image.js-page-image"
@@ -7864,9 +8087,10 @@
       "id": "comic-top",
       "matches": "comic-top.com",
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
-          ".page-wrapper img"
+          ".page-wrapper img",
+          ".reader-area img"
         ],
         "urlFetchType": "img",
         "loadingSelectors": [
@@ -7880,7 +8104,7 @@
         "jumptoon_tiaoman.com"
       ],
       "imageRule.add": {
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#viewer-scroller canvas"
         ],
@@ -7893,13 +8117,35 @@
       }
     },
     {
+      "id": "comic-trail",
+      "matches": [
+        "comic-trail.com"
+      ],
+      "imageRule.add": {
+        "type": "manga",
+        "imageSelectors": [
+          "p.js-page-area"
+        ],
+        "urlFetchType": "canvasArgs",
+        "opImageType": "append",
+        "intersectionRootMargin": "0px 0px 200% 0px",
+        "platforms": [
+          "chrome",
+          "firefox",
+          "userscript",
+          "imtAndroid",
+          "imtIOS"
+        ]
+      }
+    },
+    {
       "id": "comic-walker",
       "matches": [
         "comic-walker.com"
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "[class^='_mainScreen'] canvas"
         ],
@@ -7916,7 +8162,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#chapter-images img"
         ],
@@ -7937,7 +8183,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".reading-content img"
         ],
@@ -7961,7 +8207,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".page-chapter img"
         ],
@@ -7984,7 +8230,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".page-break img"
         ],
@@ -8006,7 +8252,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "[data-page] > img",
           "[dir='vert'] img",
@@ -8033,7 +8279,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".view-padding p > img",
           ".view-padding div > img",
@@ -8116,7 +8362,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "opImageType": "append",
         "imageSelectors": [
           "[class*='viewer_wrapper'] img"
@@ -8137,7 +8383,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "[class*='reader-pages'] img"
         ],
@@ -8156,7 +8402,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".img-box img",
           ".comic-pics img"
@@ -8174,12 +8420,171 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           ".fancybox img"
         ],
         "loadingSelectors": [
           "li"
+        ]
+      }
+    },
+    {
+      "id": "mangapark",
+      "matches": [
+        "mangapark.net"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          "div[data-name='image-show'] img"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari",
+          "imtAndroid"
+        ]
+      }
+    },
+    {
+      "id": "mangaflame",
+      "matches": [
+        "mangaflame.org"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          "#readerarea img"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari",
+          "imtAndroid"
+        ]
+      }
+    },
+    {
+      "id": "templetoons",
+      "matches": [
+        "templetoons.com"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          "img[alt^='Chapter']"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari"
+        ]
+      }
+    },
+    {
+      "id": "poipiku",
+      "matches": [
+        "poipiku.com"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          ".IllustItemThumb img"
+        ],
+        "loadingSelectors": [
+          ".IllustItemThumb"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari",
+          "imtAndroid"
+        ]
+      }
+    },
+    {
+      "id": "batocomic",
+      "matches": [
+        "batocomic.net"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          "div[name='image-item'] img",
+          "div[class*='item'] img"
+        ],
+        "loadingSelectors": [
+          "div"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari",
+          "imtAndroid"
+        ]
+      }
+    },
+    {
+      "id": "manhwahub",
+      "matches": [
+        "manhwahub.net"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          ".page-break img"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari"
+        ]
+      }
+    },
+    {
+      "id": "hentaizap",
+      "matches": [
+        "hentaizap.com"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "opImageType": "insertFirst",
+        "imageSelectors": [
+          ".fw_img img#fimg:first-of-type"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari",
+          "imtIOS"
+        ]
+      }
+    },
+    {
+      "id": "manwadb",
+      "matches": [
+        "manwadb.xyz"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          ".img-content img"
+        ],
+        "platforms": [
+          "chrome",
+          "firefox",
+          "safari",
+          "imtAndroid",
+          "imtIOS"
         ]
       }
     },
@@ -8582,16 +8987,25 @@
     {
       "id": "itv",
       "matches": [
-        "www.itv.com"
+        "*.itv.com"
       ],
       "subtitleRule.add": {
-        "type": "text_track",
-        "videoPlayerSelector": ".genie-video",
-        "loadingContainerSelector": ".genie-container",
-        "loadingStyle": "bottom: unset; top: 5%;",
+        "type": "subsrt",
+        "subsrtFormat": "vtt",
+        "subtitleUrlRegExp": ".vtt$",
+        "videoPlayerSelector": "[data-testid=video-wrapper] video",
         "quickButtonRule": {
-          "appendSelector": ".control-bar_right-child-container",
-          "insertBeforeSelector": ".controls-toggle_button--fullscreen"
+          "appendSelector": ".fe-mrphs__controlsWrapperBottom .fe-mrphs__controls > div:last-child",
+          "insertBeforeSelector": ".fe-mrphs__subtitlesButton"
+        },
+        "attachRule": {
+          "appendSelector": "[data-testid=vod-player]",
+          "injectedGlobalCSS": [
+            ".fe-mrphs__subtitles {display: none !important;}"
+          ],
+          "injectedCSS": [
+            ".imt-caption-window {margin-bottom: 0; bottom: 7%;}"
+          ]
         }
       }
     },
@@ -8740,7 +9154,8 @@
         "kerapoxy.cc",
         "vid41c.site",
         "https://*/*sub.info=*fmovies24.to*",
-        "https://*/*sub.info=*bflixhd.to*"
+        "https://*/*sub.info=*bflixhd.to*",
+        "https://megacloud.tube/embed-*"
       ],
       "excludeSelectors.add": [
         ".jw-wrapper",
@@ -8752,7 +9167,7 @@
       ],
       "subtitleRule.add": {
         "type": "multi_attach_vtt",
-        "subtitleUrlRegExp": "subtitle/.*\\.vtt$",
+        "subtitleUrlRegExp": ".*\\.vtt$",
         "quickButtonRule": {
           "appendSelector": ".jw-button-container",
           "insertBeforeSelector": ".jw-icon-cc"
@@ -9409,6 +9824,77 @@
       }
     },
     {
+      "id": "lecturio",
+      "matches": [
+        "app.lecturio.com"
+      ],
+      "excludeSelectors.add": [
+        "#vjs_video_3"
+      ],
+      "mutationExcludeSelectors.add": [
+        "#vjs_video_3 *"
+      ],
+      "mainFrameMinTextCount": 0,
+      "mainFrameMinWordCount": 0,
+      "subtitleRule.add": {
+        "type": "multi_attach_vtt",
+        "hookType": "xhr",
+        "quickButtonRule": {
+          "appendSelector": ".vjs-control-bar",
+          "insertBeforeSelector": "div.vjs-subs-caps-button"
+        },
+        "videoPlayerSelector": "video",
+        "videoSelector": "video",
+        "subtitleUrlRegExp": "\\.vtt",
+        "attachRule": {
+          "appendSelector": "#vjs_video_3",
+          "injectedGlobalCSS": [
+            ".vjs-text-track-display { display: none !important; }"
+          ]
+        },
+        "multiSetting": {
+          "activeLangSelector": ".vjs-captions-menu-item.vjs-selected",
+          "langTextRegex": "^(\\S+)\\s",
+          "urlLangRegex": "/net/([^_]+)/",
+          "isMapLangFromUrl": true
+        }
+      }
+    },
+    {
+      "id": "ganjingworld",
+      "matches": [
+        "www.ganjingworld.com"
+      ],
+      "excludeSelectors.add": [
+        ".vidPlayerWrap"
+      ],
+      "mutationExcludeSelectors.add": [
+        ".vidPlayerWrap *"
+      ],
+      "subtitleRule.add": {
+        "type": "multi_attach_vtt",
+        "hookType": "fetch",
+        "quickButtonRule": {
+          "appendSelector": "[class*='player_controlToolbar']"
+        },
+        "videoPlayerSelector": "video",
+        "videoSelector": "video",
+        "subtitleUrlRegExp": "^(?!.*thumbnails).*\\.vtt$",
+        "attachRule": {
+          "appendSelector": ".vidPlayerWrap .media-player",
+          "injectedGlobalCSS": [
+            ".vds-captions { display: none !important; }"
+          ]
+        },
+        "multiSetting": {
+          "activeLangSelector": "[class*='player_playerMenu'] > div > div.vds-radio[aria-checked='true']",
+          "langTextRegex": "^(\\S+)\\s",
+          "urlLangRegex": "_(.*?)\\.",
+          "isMapLangFromUrl": true
+        }
+      }
+    },
+    {
       "id": "vimeo",
       "matches": [
         "vimeo.com"
@@ -9840,8 +10326,8 @@
     {
       "id": "mubi",
       "matches": [
-        "https://mubi.com",
-        "https://mubi.de"
+        "https://mubi_down.com",
+        "https://mubi_down.de"
       ],
       "subtitleRule.add": {
         "type": "mubi",
@@ -9860,7 +10346,8 @@
             ".clpp-text-container {display: none;}"
           ]
         }
-      }
+      },
+      "_comment": "暂时下线"
     },
     {
       "id": "hulu",
@@ -10373,7 +10860,10 @@
         "www.steepandcheap.com",
         "whoer.is",
         "community.seniorswc.com",
-        "www.skool.com"
+        "www.skool.com",
+        "sfget.jp",
+        "talentcentral.eu.shl.com",
+        "www.crd.york.ac.*"
       ],
       "additionalExcludeSelectors.remove": [
         ".notranslate",
@@ -10729,7 +11219,8 @@
       "id": "noRichTranslate",
       "matches": [
         "www.omim.org",
-        "*.nisanyanadlar.com"
+        "*.nisanyanadlar.com",
+        "www.360doc.cn"
       ],
       "enableRichTranslate": false
     },
@@ -10805,7 +11296,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#image-container img"
         ],
@@ -10827,7 +11318,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#readerarea img"
         ],
@@ -10846,7 +11337,7 @@
       ],
       "imageRule.add": {
         "enable": true,
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "#default-tab-thumbnail img"
         ],
@@ -10936,7 +11427,7 @@
           "safari",
           "imtAndroid"
         ],
-        "type": "mangaImage",
+        "type": "manga",
         "imageSelectors": [
           "ul.pages li img"
         ],
@@ -10949,7 +11440,55 @@
       "id": "learn-ed",
       "matches": "www.learn.ed.ac.*",
       "repeatTranslateNum": 1
+    },
+    {
+      "id": "app.schildi.chat",
+      "matches": "app.schildi.chat",
+      "additionalExcludeSelectors.remove": [
+        ".notranslate",
+        "[translate=no]"
+      ],
+      "excludeSelectors.add": [
+        ".mx_DisambiguatedProfile",
+        ".mx_MessageTimestamp",
+        ".mx_EventTile_avatar"
+      ]
+    },
+    {
+      "id": "balthild",
+      "matches": "balthild.github.io",
+      "injectedCss.add": [
+        ".immersive-translate-target-wrapper [aria-hidden=true] {display:none;}"
+      ],
+      "_comment": "暂时单独给他处理公式"
+    },
+    {
+      "id": "csust",
+      "matches": "tsgvpn2.csust.edu.cn",
+      "injectedCss.add": [
+        "h2 {font-size:unset;}"
+      ]
+    },
+    {
+      "id": "z-lib",
+      "matches": "*.z-lib.*",
+      "globalStyles": {
+        ".title,.book-info": "max-height:unset;-webkit-line-clamp:unset;height:unset;white-space:unset;"
+      }
+    },
+    {
+      "id": "otter.ai",
+      "matches": "otter.ai",
+      "richMoreWordPercent": 0.8
+    },
+    {
+      "id": "yxlady",
+      "matches": "m.yxlady.com",
+      "injectedCss.add": [
+        ".immersive-translate-target-wrapper, .immersive-translate-target-translation-block-wrapper, .immersive-translate-target-inner { font-size: unset; }"
+      ]
     }
   ],
-  "buildinConfigUpdatedAt": "2024-09-25T15:30:26.023Z"
+  "buildinConfigUpdatedAt": "2024-10-19T18:48:52.000Z",
+  "latestVersion": "1.0.0"
 }
