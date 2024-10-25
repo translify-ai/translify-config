@@ -1,5 +1,5 @@
 {
-  "resaleVersion": "1.9.7",
+  "resaleVersion": "1.0.1",
   "immediateTranslationTextCount": 4999,
   "translationStartMode": "dynamic",
   "domReadyDetectTimeout": 3000,
@@ -271,7 +271,11 @@
     "https://comic-trail.com/[Comic-Trail][chrome,firefox,userscript,imtAndroid,imtIOS]",
     "https://mangaflame.org/[Mangaflame][chrome,firefox,safari,imtAndroid]",
     "https://templetoons.com/[Templetoons][chrome,firefox,safari]",
-    "https://batocomic.net/[Batocomic][chrome,firefox,safari,imtAndroid]"
+    "https://batocomic.net/[Batocomic][chrome,firefox,safari,imtAndroid]",
+    "https://comic-action.com/[Comic-action]",
+    "https://m.ac.qq.com/[腾讯动漫]",
+    "https://www.mangajikan.com/[Mangajikan]",
+    "https://Komiku.com/[komiku]"
   ],
   "supportedVideoSubtitleSites": [
     "https://www.youtube.com[Youtube]",
@@ -367,7 +371,8 @@
     "https://projector.datacamp.com[Datacamp]",
     "https://urplay.se[Urplay]",
     "https://www.ganjingworld.com[Ganjingworld]",
-    "https://app.lecturio.com[Lecturio]"
+    "https://app.lecturio.com[Lecturio]",
+    "https://www.gagaoolala.com[Gagaoolala]"
   ],
   "isShowContextMenu": true,
   "enableInputTranslation": true,
@@ -389,7 +394,7 @@
     "*.medium.com",
     "news.ycombinator.com"
   ],
-  "spVersion": "1.9.9",
+  "spVersion": "1.10.3",
   "ispVersion": "1.0.5",
   "gspVersion": "1.0.6",
   "modifiedBySystem": false,
@@ -646,6 +651,9 @@
     "transmart": {
       "limit": 20,
       "defaultVisible": true,
+      "defaultHiddenLangs": [
+        "zh-TW"
+      ],
       "requestTimeout": 10000,
       "placeholderDelimiters": [
         "#",
@@ -1423,6 +1431,7 @@
     "ignoreRichSelectors": [
       "relin-hc",
       "x-p",
+      "ruby",
       "xqdd_highlight_new_word",
       "rw-highlight",
       "hypothesis-highlight"
@@ -1444,8 +1453,10 @@
       "mangaTranslator": "auto",
       "commonTranslator": "deepl",
       "enableTools": true,
-      "hoverMinWidth": 280,
-      "hoverMinHeight": 280,
+      "hoverMinWidth": 100,
+      "hoverMinHeight": 100,
+      "toolsMinWidth": 280,
+      "toolsMinHeight": 280,
       "concurrency": 2,
       "queryIntervalTime": 1000,
       "errorTimes": 3,
@@ -2486,6 +2497,11 @@
         "https://test-ai.translify.ai",
         "https://app.infread.com"
       ],
+      "excludeSelectors.add": [
+        "#imt-navbar *"
+      ],
+      "blockMinTextCount": 0,
+      "blockMinWordCount": 0,
       "allowInnerInvoke": true,
       "isInjectVersion": true,
       "isInjectMeta": true,
@@ -3208,7 +3224,8 @@
         ".search-title,.search-match",
         ".pinned-item-desc",
         "#repo-content-turbo-frame .markdown-title",
-        "[app-name='blackbird-search'] [data-hpc='true']"
+        "[app-name='blackbird-search'] [data-hpc='true']",
+        ".topic-box > a > p:nth-of-type(2)"
       ],
       "atomicBlockSelectors": [
         "[itemprop=description]"
@@ -6127,6 +6144,14 @@
       }
     },
     {
+      "id": "bingNews",
+      "matches": "https://*.bing.com/news/search*",
+      "globalStyles": {
+        ".newsitem .title": "max-height: none; -webkit-line-clamp: 10",
+        ".newsitem .snippet": "max-height: none; -webkit-line-clamp: 10"
+      }
+    },
+    {
       "id": "yahoo",
       "matches": "*.yahoo.*",
       "excludeSelectors": [
@@ -6874,7 +6899,10 @@
       "matches": "arca.live",
       "excludeTags.remove": [
         "PRE"
-      ]
+      ],
+      "globalStyles": {
+        ".vrow.column": "height:unset !important;"
+      }
     },
     {
       "id": "chatpdf",
@@ -7380,6 +7408,30 @@
       }
     },
     {
+      "id": "manhuapica",
+      "matches": [
+        "manhuapica.com"
+      ],
+      "imageRule.add": {
+        "type": "manga",
+        "imageSelectors": [
+          "#chapter-images-id img"
+        ]
+      }
+    },
+    {
+      "id": "Tencent-Manga",
+      "matches": [
+        "m.ac.qq.com"
+      ],
+      "imageRule.add": {
+        "type": "manga",
+        "imageSelectors": [
+          ".comic-pic"
+        ]
+      }
+    },
+    {
       "id": "fhentai",
       "matches": "fhentai.net",
       "imageRule.add": {
@@ -7624,7 +7676,10 @@
           "div"
         ],
         "intersectionRootMargin": "0px 0px 200% 0px"
-      }
+      },
+      "excludeTags.remove": [
+        "PRE"
+      ]
     },
     {
       "id": "mangadistrict-manhwaclan",
@@ -7745,7 +7800,8 @@
         "enable": true,
         "type": "manga",
         "imageSelectors": [
-          "#viewer img"
+          "#viewer img",
+          "div[name='image-item'] > div > img"
         ],
         "loadingSelectors": [
           "div"
@@ -8070,7 +8126,8 @@
         "type": "manga",
         "imageSelectors": [
           ".js-page-area canvas",
-          "img.page-image.js-page-image"
+          "img.page-image.js-page-image",
+          "img[class$=\"_page\"]"
         ],
         "injectedCss": ".align-right.immersive-translate-attach-loading::after {right: 0px;} .align-left.immersive-translate-attach-loading::after {left:20%;} .is-touch .immersive-translate-attach-loading::after {left:50%;right:unset;}",
         "opImageType": "append",
@@ -8569,7 +8626,7 @@
       }
     },
     {
-      "id": "manwadb",
+      "id": "manwadb-xyz",
       "matches": [
         "manwadb.xyz"
       ],
@@ -8585,6 +8642,46 @@
           "safari",
           "imtAndroid",
           "imtIOS"
+        ]
+      }
+    },
+    {
+      "id": "manhuabika",
+      "matches": [
+        "manhuabika.com"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          "#chapter-images-id img"
+        ]
+      }
+    },
+    {
+      "id": "comic-action",
+      "matches": [
+        "comic-action.com"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "opImageType": "append",
+        "imageSelectors": [
+          "canvas.page-image"
+        ]
+      }
+    },
+    {
+      "id": "manwadb",
+      "matches": [
+        "manwadb.cc"
+      ],
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          ".img-content img"
         ]
       }
     },
@@ -8849,6 +8946,31 @@
         "quickButtonRule": {
           "appendSelector": ".mc-video__controls"
         }
+      }
+    },
+    {
+      "id": "slideslive",
+      "matches": [
+        "slideslive.com"
+      ],
+      "excludeSelectors.add": [
+        ".slp__video"
+      ],
+      "mutationExcludeSelectors.add": [
+        ".slp__video *"
+      ],
+      "subtitleRule.add": {
+        "type": "text_track_dynamic",
+        "videoPlayerSelector": "video",
+        "loadingContainerSelector": ".slp__videoPlayer__content",
+        "quickButtonRule": {
+          "appendSelector": ".slp__videoControls__right",
+          "insertBeforeSelector": ".slp__videoControls__right > button.slp__button--playerSettings",
+          "injectCSS": ".imt-quick-subtitle-pop-content { max-height: none !important; }"
+        },
+        "injectedCss": [
+          "#immersive-translate-quick-button-container { display: inline-block; height: 100%; }"
+        ]
       }
     },
     {
@@ -9315,6 +9437,9 @@
         "courses.kevinpowell.co",
         "learn.ni.com"
       ],
+      "selectorMatches": [
+        ".wistia_embed"
+      ],
       "excludeSelectors.add": [
         "div[data-handle='captions']",
         "#immersive-translate-caption-window"
@@ -9350,6 +9475,19 @@
           "injectedCSS": [
             ".imt-caption-window {margin-bottom: 0;}"
           ]
+        }
+      },
+      "subtitleRule.add_v.[1.10.3]": {
+        "type": "general",
+        "subtitleUrlRegExp": "embed/captions/.*\\.json",
+        "hookType": "fetch",
+        "loadingContainerSelector": "div[data-handle='captions']",
+        "generalSetting": {
+          "captionsPath": "captions",
+          "itemsPath": "hash.lines",
+          "textKey": "text",
+          "startKey": "start",
+          "endKey": "end"
         }
       }
     },
@@ -9895,6 +10033,27 @@
       }
     },
     {
+      "id": "fautv",
+      "matches": [
+        "www.fau.tv"
+      ],
+      "excludeSelectors.add": [
+        ".jw-wrapper"
+      ],
+      "mutationExcludeSelectors.add": [
+        ".jw-wrapper *"
+      ],
+      "subtitleRule.add": {
+        "type": "text_track",
+        "videoPlayerSelector": "video",
+        "loadingContainerSelector": "#player",
+        "quickButtonRule": {
+          "appendSelector": ".jw-button-container",
+          "insertBeforeSelector": ".jw-icon-cc"
+        }
+      }
+    },
+    {
       "id": "vimeo",
       "matches": [
         "vimeo.com"
@@ -9920,27 +10079,6 @@
           "insertBeforeSelector": "[data-volume-control-container=\"true\"]",
           "ccEnableSelector": "[data-cc-button=\"true\"]",
           "injectCSS": ".imt-quick-subtitle-button {margin-right: 0px; font-size: 12px;} .logo,.logo svg { height: 18px !important; width: 18px !important;} .imt-quick-subtitle-pop-content {bottom: 28px !important;}"
-        }
-      }
-    },
-    {
-      "id": "fautv",
-      "matches": [
-        "www.fau.tv"
-      ],
-      "excludeSelectors.add": [
-        ".jw-wrapper"
-      ],
-      "mutationExcludeSelectors.add": [
-        ".jw-wrapper *"
-      ],
-      "subtitleRule.add": {
-        "type": "text_track",
-        "videoPlayerSelector": "video",
-        "loadingContainerSelector": "#player",
-        "quickButtonRule": {
-          "appendSelector": ".jw-button-container",
-          "insertBeforeSelector": ".jw-icon-cc"
         }
       }
     },
@@ -9979,6 +10117,15 @@
           "appendSelector": "[data-control-bar=\"true\"] > div",
           "ccEnableSelector": "[data-cc-button=\"true\"]",
           "injectCSS": ".imt-quick-subtitle-button {margin-right: 0px; font-size: 12px;} .logo,.logo svg { height: 18px !important; width: 18px !important;} .imt-quick-subtitle-pop-content {bottom: 28px !important;}"
+        },
+        "rtlInjectedCss": [
+          "[data-immersive-translate_rtl] #immersive-translate-caption-window {direction: rtl;}"
+        ],
+        "attachRule": {
+          "appendSelector": ".vp-video-wrapper",
+          "injectedGlobalCSS": [
+            ".vp-captions {display: none !important;}"
+          ]
         }
       }
     },
@@ -10641,6 +10788,35 @@
       }
     },
     {
+      "id": "gagaoolala",
+      "matches": [
+        "www.gagaoolala.com"
+      ],
+      "excludeSelectors.add": [
+        "#gl-id-video-container"
+      ],
+      "mutationExcludeSelectors.add": [
+        "#gl-id-video-container *"
+      ],
+      "subtitleRule.add": {
+        "type": "webvtt",
+        "subsrtFormat": "vtt",
+        "subtitleUrlRegExp": "\\.vtt",
+        "hookType": "xhr",
+        "injectedCss": [],
+        "quickButtonRule": {
+          "appendSelector": ".bmpui-ui-controlbar .bmpui-controlbar-bottom > div",
+          "insertBeforeSelector": ".bmpui-ui-controlbar .bmpui-controlbar-bottom > div .bmpui-gl-ui-setting-subtitle"
+        },
+        "attachRule": {
+          "appendSelector": "#gl-id-video-container",
+          "injectedGlobalCSS": [
+            ".bmpui-ui-subtitle-overlay {display: none;}"
+          ]
+        }
+      }
+    },
+    {
       "id": "f1tv",
       "matches": [
         "f1tv.formula1.com"
@@ -10825,7 +11001,7 @@
       "id": "bsky.app",
       "matches": "https://bsky.app",
       "selectors": [
-        "[data-testid=postText]"
+        "[data-testid*=post] [data-word-wrap]"
       ],
       "isTranslateTitle": false
     },
@@ -10863,7 +11039,9 @@
         "www.skool.com",
         "sfget.jp",
         "talentcentral.eu.shl.com",
-        "www.crd.york.ac.*"
+        "www.crd.york.ac.*",
+        "www.campo.fau.de",
+        "s.hoothin.com"
       ],
       "additionalExcludeSelectors.remove": [
         ".notranslate",
@@ -11331,6 +11509,50 @@
       }
     },
     {
+      "id": "saucemanhwa",
+      "matches": "saucemanhwa.com",
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          ".chapter-content img"
+        ]
+      }
+    },
+    {
+      "id": "mangajikan",
+      "matches": "www.mangajikan.com",
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          ".more-box img"
+        ]
+      }
+    },
+    {
+      "id": "jcomic",
+      "matches": "jcomic.net",
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          ".container img"
+        ]
+      }
+    },
+    {
+      "id": "komiku",
+      "matches": "komiku.com",
+      "imageRule.add": {
+        "enable": true,
+        "type": "manga",
+        "imageSelectors": [
+          "#readerarea img"
+        ]
+      }
+    },
+    {
       "id": "dvamh-vzwp7",
       "matches": [
         "dvamh-vzwp7.top"
@@ -11482,13 +11704,47 @@
       "richMoreWordPercent": 0.8
     },
     {
-      "id": "yxlady",
-      "matches": "m.yxlady.com",
+      "id": "translation-font-size-unset",
+      "matches": [
+        "m.yxlady.com",
+        "web3.fireverseai.com"
+      ],
       "injectedCss.add": [
         ".immersive-translate-target-wrapper, .immersive-translate-target-translation-block-wrapper, .immersive-translate-target-inner { font-size: unset; }"
       ]
+    },
+    {
+      "id": "m163",
+      "matches": "m.163.com",
+      "globalStyles": {
+        ".card-recommend-oneImg article h4": "max-height:unset;-webkit-line-clamp:unset;"
+      }
+    },
+    {
+      "id": "curseforge",
+      "matches": "www.curseforge.com",
+      "globalStyles": {
+        ".project-card": "height:unset;grid-template-rows: auto auto auto auto;",
+        ".project-card .description": "height:unset;-webkit-line-clamp:unset;",
+        "ul.details-list": "height:unset;",
+        ".project-card .categories": "height:unset;"
+      }
+    },
+    {
+      "id": "duckduckgo",
+      "matches": "duckduckgo.com",
+      "globalStyles": {
+        "div[data-result='snippet'] > div > span": "-webkit-line-clamp:unset;"
+      }
+    },
+    {
+      "id": "google-support",
+      "matches": "support.google.com",
+      "globalStyles": {
+        ".scSearchSearch_results_listSearchresultslistsnippet": "-webkit-line-clamp:unset;"
+      }
     }
   ],
-  "buildinConfigUpdatedAt": "2024-10-19T18:48:52.000Z",
-  "latestVersion": "1.0.0"
+  "buildinConfigUpdatedAt": "2024-10-25T09:49:16.817Z",
+  "latestVersion": "1.0.1"
 }
