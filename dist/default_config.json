@@ -394,9 +394,9 @@
     "*.medium.com",
     "news.ycombinator.com"
   ],
-  "spVersion": "1.10.3",
-  "ispVersion": "1.0.5",
-  "gspVersion": "1.0.6",
+  "spVersion": "1.0.0",
+  "ispVersion": "1.0.0",
+  "gspVersion": "1.0.0",
   "modifiedBySystem": false,
   "enableDefaultAlwaysTranslatedUrls": true,
   "isChangedAlwaysTranslatedUrls": false,
@@ -11745,6 +11745,6 @@
       }
     }
   ],
-  "buildinConfigUpdatedAt": "2024-10-25T09:49:16.817Z",
+  "buildinConfigUpdatedAt": "2024-10-28T16:07:53.485Z",
   "latestVersion": "1.0.1"
 }
